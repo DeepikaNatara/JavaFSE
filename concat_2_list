@@ -1,0 +1,13 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.util.stream.*;
+class HelloWorld {
+    public static void main(String[] args) {
+      List<Integer> l1=Arrays.asList(2,3,6,4,1);
+       List<Integer> l2=Arrays.asList(2,3,6,4,1);
+Stream.concat(l1.stream(),l2.stream()).collect(Collectors.toList()).stream().sorted().forEach(System.out::println);
+
+
+    }
+}
