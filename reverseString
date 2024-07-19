@@ -1,0 +1,14 @@
+//reverse String without third variable
+class HelloWorld {
+    public static void main(String[] args) {
+       String a="Deepika";
+       char b[]=new char[a.length()];
+       
+       int index=a.length()-1;
+       for(char i:a.toCharArray()){
+           b[index--]=i;
+       }
+       System.out.println(b);
+       
+    }
+}
