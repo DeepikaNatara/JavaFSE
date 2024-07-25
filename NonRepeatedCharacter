@@ -1,0 +1,3 @@
+ String i="Java Hungry Blog Alive is Awesomre";
+       
+Arrays.stream(i.split("")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting())).entrySet().stream().filter(q->q.getValue()==1L).forEach(System.out::println);
