@@ -1,0 +1,19 @@
+public class ComparingTwoObject {
+public static void main(String[] args) {
+	
+	Employee e1=new Employee(1, "abc", 28, 123, "F", "HR", "Bangalore", 2020);
+	Employee e2=new Employee(1, "abc", 28, 123, "F", "HR", "Bangalore", 2020);
+	
+Comparator<Employee> c=Comparator
+.comparingInt(Employee::getId)
+.thenComparing(Employee::getName)
+.thenComparingInt(Employee::getAge)
+.thenComparingLong(Employee::getSalary)
+.thenComparing(Employee::getGender)
+.thenComparing(Employee::getDeptName)
+.thenComparing(Employee::getCity)
+.thenComparingInt(Employee::getYearOfJoining);
+
+System.out.println(c.compare(e1, e2));
+}
+}
