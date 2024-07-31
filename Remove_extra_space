@@ -1,0 +1,3 @@
+String a="Advices are    actions taken for a particular    join point. In terms of programming,   they are methods that get executed when a certain join point     with matching pointcut is reached in the application";
+String b=Arrays.stream(a.split("\\s+")).filter(e2->!e2.isEmpty()).collect(Collectors.joining(" "));
+System.out.println(b);
